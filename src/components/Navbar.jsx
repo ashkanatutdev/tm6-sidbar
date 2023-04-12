@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-	FaAngleRight,
-	FaAngleLeft, 
 	FaChartBar, 
 	FaThLarge, 
 	FaShoppingCart, 
@@ -9,8 +7,11 @@ import {
 	FaSignOutAlt,
 	FaBars
 } from 'react-icons/fa';
+
+import {HiMenuAlt1, HiX} from 'react-icons/hi'
+
 import { NavLink } from "react-router-dom";
-import "../style/navbar.css";
+import "../css/navbar.css";
 
 const ICON_SIZE = 20;
 
@@ -33,18 +34,9 @@ function Navbar({visible, show}) {
 					onClick={() => show(!visible)}
 				>
 					{ !visible
-						? <FaAngleRight size={30} /> : <FaAngleLeft size={30} />}
+						? <HiMenuAlt1 size={30} /> : <HiX size={30} />}
 				</button>
 				<div>
-					<NavLink
-						className="logo"
-						to="/"
-					>
-							<img
-								src={require("../assets/Images/logo.png")}
-								alt="logo"
-							/>
-					</NavLink>
 					<div className="links nav-top">
 						<NavLink to="/dashboard" className="nav-link">
 							<FaThLarge size={ICON_SIZE} />
@@ -61,7 +53,7 @@ function Navbar({visible, show}) {
 					</div>
 				</div>
 
-				<div className="links">
+				{/* <div className="links">
 					<NavLink to="/settings" className="nav-link">
 						<FaCog size={ICON_SIZE} />
 						<span>Settings</span> 
@@ -70,7 +62,7 @@ function Navbar({visible, show}) {
 						<FaSignOutAlt size={ICON_SIZE} />
 						<span>Logout</span> 
 					</NavLink>
-				</div>
+				</div> */}
 			</nav>
 		</>
   );

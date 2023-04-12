@@ -20,11 +20,11 @@
 	justify-content: center;
 	align-items: center;
 	transition: margin-left 1s;
+	&-with-navbar{
+		margin-left: 240px;
+	}
 }
 
-.page-with-navbar{
-	margin-left: 15%;
-}
 
 @media only screen and (max-width: 768px){
 	.page-with-navbar{

@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
-import "./style/index.css";
+import "./css/index.css";
 
 function App() {
-	const [navVisible, showNavbar] = useState(false);
+	const [navVisible, showNavbar] = useState(window.innerWidth > 768);
 
 	return (
 		<BrowserRouter >
